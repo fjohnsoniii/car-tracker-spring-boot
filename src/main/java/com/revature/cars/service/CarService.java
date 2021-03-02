@@ -33,7 +33,7 @@ public class CarService {
 		updatedCar.setModel(car.getModel());
 		updatedCar.setCarType(car.getCarType());
 		updatedCar.setPrice(car.getPrice());
-		updatedCar.setSold(car.isSold());
+//		updatedCar.setSold(car.isSold());
 		return updatedCar;
 	}
 	

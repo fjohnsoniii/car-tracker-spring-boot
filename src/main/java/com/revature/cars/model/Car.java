@@ -30,7 +30,6 @@ public class Car {
 	
 	@Column
 	@NotNull
-	@Size(min = 4)
 	private int year;
 	
 	@Column
@@ -49,7 +48,7 @@ public class Car {
 	@NotNull
 	private double price;
 	
-	@Column
-	@NotNull
-	private boolean sold;
+//	@Column
+//	@NotNull
+//	private boolean sold;
 }
