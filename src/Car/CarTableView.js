@@ -2,7 +2,7 @@ import React from 'react';
 
 const CarTableView = ({car, id, deleteCar}) => {
     return (
-        <table className="carsTable">
+        <table className="table table-dark table-striped">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -11,7 +11,6 @@ const CarTableView = ({car, id, deleteCar}) => {
                     <th>Model</th>
                     <th>Type</th>
                     <th>Price</th>
-                    <th>Sold</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,9 +20,8 @@ const CarTableView = ({car, id, deleteCar}) => {
                     <td>{car.make}</td>
                     <td>{car.model}</td>
                     <td>{car.carType}</td>
-                    <td>{car.price}</td>
-                    <td>{car.sold}</td>
-                    <td><button className="deleteCar" onClick={(e) => deleteCar(id)}>Delete</button></td>
+                    <td>${car.price.toFixed(2)}</td>
+                    <td><button type="button" className="btn btn-danger" onClick={(e) => {if (window.confirm("Are you sure you want to delete this item?")) deleteCar(id)}}>Delete</button></td>
                 </tr>
             </tbody>
         </table>
