@@ -23,7 +23,6 @@ export default class AddCar extends React.Component {
     }
 
     handleSubmit = (event) => {
-        event.preventDefault();
         Axios.post(
             carsUrl,
             this.state

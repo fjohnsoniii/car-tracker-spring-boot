@@ -3,6 +3,7 @@ import Axios from 'axios';
 import { carsUrl } from '../Utility/Url';
 import CarTableView from './CarTableView';
 
+
 const CarContainer = () => {
 
     const [cars, setCars] = useState([]); //default state set to empty array
@@ -31,9 +32,25 @@ const CarContainer = () => {
 
     return (
         <div className="carsListContainer">
-            {cars.map(car => (
-                <CarTableView car={car} key={car.id} id={car.id} deleteCar={deleteCar}/>
-            ))} 
+            <table className="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Year</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {cars.map(car => (
+                    <CarTableView car={car} key={car.id} id={car.id} deleteCar={deleteCar}/>
+                ))}
+            </tbody>
+                
+            </table>
+            
         </div>
     );
 }

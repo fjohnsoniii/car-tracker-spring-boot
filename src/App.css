@@ -46,6 +46,7 @@
   float: left;
   list-style: none;
   padding-left: 5px;
+  margin: auto;
 }
 
 .navbar ul li {
@@ -68,8 +69,7 @@
   border-radius: 5px;
   max-width: 60%;
   text-align: center;
-  margin-left: 19%;
-  margin-top: 15%;
+  margin: auto;
   background-color: black;
 }
 
@@ -96,7 +96,31 @@ body {
   background-color: darkgray;
 }
 
-td {
+table {
+  width: 100%;
+  padding: 8px;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background: black;
+  color: white;
+}
+
+td, th {
   font-weight: bold;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+input {
+  padding: 5px;
 }
 

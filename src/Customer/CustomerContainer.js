@@ -31,9 +31,22 @@ const CustomerContainer = () => {
 
     return (
         <div className="customersListContainer">
-            {customers.map(customer => (
-                <CustomerTableView customer={customer} key={customer.id} id={customer.id} deleteCustomer={deleteCustomer}/>
-            ))} 
+            <table className="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First</th>
+                    <th>Last</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {customers.map(customer => (
+                    <CustomerTableView customer={customer} key={customer.id} id={customer.id} deleteCustomer={deleteCustomer}/>
+                ))}
+            </tbody>
+            </table>
+             
         </div>
     );
 }
